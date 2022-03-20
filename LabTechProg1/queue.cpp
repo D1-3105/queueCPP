@@ -33,7 +33,6 @@ int Queue::pop()
     }
 
     int val = ptr->data;
-    delete ptr;
     ptr = nullptr;
     prev->next = nullptr;
     this->size--;
@@ -60,19 +59,24 @@ std::string Queue::toString()
     ans += "}";
     return ans;
 }
-
-void Queue::copy(Queue& q)
+void Queue::copy(Queue& q, int force)
 {
-    int* qarr = q.toArr();
-    for (int i = 0; i < q.get_size(); i++) {
-        this->push(qarr[i]);
+    if (force == 1) {
+        for (int i = 0; i < this->get_size(); i++)
+            this->pop();
     }
+    int *q_arr = q.toArr();
+    for (int i = 0; i < q.get_size(); i++)
+        this->push(q_arr[i]);
 }
 
-void Queue::merge(Queue& q) {
-    this->copy(q);
-    std::cout << this->toString();
+void Queue::merge(Queue& q1, Queue& q2) 
+{
+    this->copy(q1, 0);
+    this->copy(q2, 0);
 }
+
+
 
 int* Queue::toArr()
 {

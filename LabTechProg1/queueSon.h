@@ -24,8 +24,8 @@ public:
 	int pop();
 	int get();
 	std::string toString();
-	void merge(Queue& q);
-	void copy(Queue& q);
+	void merge(protectedSon& q1, protectedSon& q2);
+	void copy(protectedSon& q);
 	bool isEmpty();
 	protectedSon() :Queue() {};
 	protectedSon(int* l, int len) : Queue(l, len) {};
@@ -38,8 +38,8 @@ public:
 	int pop();
 	int get();
 	std::string toString();
-	void merge(Queue& q);
-	void copy(Queue& q);
+	void merge(privateSon& q1, privateSon& q2);
+	void copy(privateSon& q);
 	bool isEmpty();
 	privateSon() :Queue() {};
 	privateSon(int* l, int len) : Queue(l, len) {};

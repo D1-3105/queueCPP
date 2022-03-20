@@ -19,8 +19,8 @@ public:
 	int pop();
 	int get();
 	std::string toString();
-	void merge(Queue& q);
-	void copy(Queue& q);
+	void merge(Queue& q1, Queue& q2);
+	void copy(Queue& q, int force=1);
 	int* toArr();
 	int get_size() {
 		return this->size;

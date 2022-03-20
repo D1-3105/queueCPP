@@ -3,7 +3,7 @@
 void menu();
 int choice();
 template<class T>
-void chosenClass(T& q);
+void chosenClass(T q[]);
 template<class obj>
 inline void print(obj o, int newline=1) {
 	try {

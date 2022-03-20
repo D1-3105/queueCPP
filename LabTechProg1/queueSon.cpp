@@ -33,12 +33,12 @@ std::string privateSon::toString()
 	return Queue::toString();
 }
 
-void privateSon::merge(Queue& q)
+void privateSon::merge(privateSon& q1, privateSon& q2)
 {
-	return Queue::merge(q);
+	return Queue::merge(q1,q2);
 }
 
-void privateSon::copy(Queue& q)
+void privateSon::copy(privateSon& q)
 {
 	return Queue::copy(q);
 }
@@ -82,12 +82,12 @@ std::string protectedSon::toString()
 	return Queue::toString();
 }
 
-void protectedSon::merge(Queue& q)
+void protectedSon::merge(protectedSon& q1, protectedSon& q2)
 {
-	return Queue::merge(q);
+	return Queue::merge(q1, q2);
 }
 
-void protectedSon::copy(Queue& q)
+void protectedSon::copy(protectedSon& q)
 {
 	return Queue::copy(q);
 }
